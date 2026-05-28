@@ -189,7 +189,7 @@ This project uses **LiteLLM** to connect to various LLM providers. To use a diff
 
 7. **Demo:**
    [![Demo Thumbnail](https://github.com/user-attachments/assets/474a2771-17f5-44e5-b0fb-51b60d56b928
-)](https://github.com/user-attachments/assets/b68048a8-8765-46f0-82be-0f4f7cce75ce)
+)](https://drive.google.com/file/d/1R1Ou4uydm2659QooDG4WDiN_6Y2hKtvs/view?usp=drive_link)
 
 ---
 
