@@ -22,34 +22,9 @@ A multi-agent system for automated financial analysis and advisory recommendatio
 ## Architecture
 
 ### High-Level Design
+<img width="1381" height="551" alt="image" src="https://github.com/user-attachments/assets/d7507342-843f-4421-ae03-e3dab32d99b7" />
 
-```mermaid
-graph TD
-    subgraph User Interaction
-        A[User via Streamlit UI]
-    end
-
-    subgraph Backend
-        B[FastAPI Server]
-        C[Wealth Advisor Orchestrator]
-        D[LLM Service via LiteLLM]
-        E[Tools: Financial Analysis, CRM]
-    end
-
-    subgraph "Data Persistence"
-        F["Output Runs (.json)"]
-        G["Historical Memory (.jsonl)"]
-        H["Run Store (In-Memory)"]
-    end
-
-    A -- REST API Request --> B
-    B -- Invokes --> C
-    C -- Uses --> D
-    C -- Uses --> E
-    C -- Writes to --> F
-    C -- Reads/Writes to --> G
-    C -- Manages --> H
-```
+---
 
 ### Component Breakdown
 
@@ -87,30 +62,7 @@ graph TD
 ## Multi-Agent System
 
 This diagram illustrates the interaction between the orchestrator and the specialized agents.
-
-```mermaid
-graph TD
-    subgraph Orchestrator
-        O[Wealth Advisor Orchestrator]
-    end
-
-    subgraph Agents
-        DA[Data Fetcher Agent]
-        A[Analyzer Agent]
-    end
-
-    subgraph Tools
-        FA[Financial Analysis Tools]
-        CRM[Mock CRM]
-    end
-
-    O -- Delegates Task --> DA
-    O -- Delegates Task --> A
-    DA -- Fetches Data --> CRM
-    A -- Performs Analysis --> FA
-    DA -- Returns Enriched Profile --> O
-    A -- Returns Financial Insights --> O
-```
+<img width="875" height="651" alt="image" src="https://github.com/user-attachments/assets/03842b29-af39-4e80-85df-7957d63d3cd2" />
 
 ---
 
@@ -234,6 +186,10 @@ This project uses **LiteLLM** to connect to various LLM providers. To use a diff
     streamlit run frontend/streamlit_app.py
     ```
     The Streamlit UI will be available at `http://localhost:8501`.
+
+7. **Demo:**
+   [![Demo Thumbnail](https://github.com/user-attachments/assets/474a2771-17f5-44e5-b0fb-51b60d56b928
+)](https://github.com/user-attachments/assets/b68048a8-8765-46f0-82be-0f4f7cce75ce)
 
 ---
 
